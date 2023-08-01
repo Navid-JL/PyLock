@@ -2,8 +2,10 @@ import threading
 
 lock = threading.Lock()
 
+shared_data = []
+
 
 def modify_shared_data():
     lock.acquire()
-    # Code to modify shared data goes here
+    shared_data.append("New data")
     lock.release()
