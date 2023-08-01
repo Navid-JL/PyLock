@@ -6,6 +6,5 @@ shared_data = []
 
 
 def modify_shared_data():
-    lock.acquire()
-    shared_data.append("New data")
-    lock.release()
+    with lock:
+        shared_data.append("New data")
