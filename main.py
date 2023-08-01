@@ -21,7 +21,7 @@ def main():
         thread.join()
 
     with lock:
-        print(shared_data)
+        print("Shared data:", shared_data)
 
 
 if __name__ == "__main__":
