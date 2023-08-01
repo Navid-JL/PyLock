@@ -20,7 +20,8 @@ def main():
     for thread in threads:
         thread.join()
 
-    print(shared_data)
+    with lock:
+        print(shared_data)
 
 
 if __name__ == "__main__":
